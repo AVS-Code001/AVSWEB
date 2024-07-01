@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDF7E5;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.title {
+    font-size: 80px;
+    color: #2368C6;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #2368C6;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2368C6;
+    margin: 0 15px;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease, border-radius 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #2368C6;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #2368C6;
+}
+
+.navbar a:hover {
+    color: #1A4A90;
+}
+
+.navbar a.active {
+    color: #1A4A90;
+    border-radius: 15px;
+    background-color: #E5F0FF;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Font and Animation Adjustments */
+.section h2, .section p {
+    font-family: Arial, sans-serif; /* Example font change */
+}
+
+/* New Resume Button Style */
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2368C6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #1A4A90;
+}
+
+/* Toggle Resume Button */
+#toggleResumeButton {
+    margin-bottom: 10px;
+}
+  
+    .controls {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.controls label {
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.controls input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#readMoreButton {
+    padding: 10px 20px;
+    background-color: #2368C6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#readMoreButton:hover {
+    background-color: #1A4A90;
+}
+
+
+.land-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.land-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: width 0.5s ease, margin 0.5s ease;
+}
+
+.land-image {
+    width: 50%;
+    transition: width 0.5s ease, margin 0.5s ease;
+}
+
+.land-text {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.controls {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar.show {
+    opacity: 1;
+    max-height: 100px;
+}
+
+/* Contact Us Section */
+
+.contact-us, .discover-more {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-us.active, .discover-more.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-us h1, .discover-more h2 {
+    color: #333;
+}
+
+.contact-us p, .discover-more p {
+    color: #666;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-us input, .contact-us select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-us button.get-help {
+    padding: 10px;
+    background-color: #2368C6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button.get-help:hover {
+    background-color: #1A4A90;
+}
+
+.contact-us a.privacy-policy, .discover-more a.help-center {
+    color: #2368C6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-us a.privacy-policy:hover, .discover-more a.help-center:hover {
+    color: #1A4A90;
+}
+
+.discover-more {
+    text-align: center;
+    padding-top: 0;
+}

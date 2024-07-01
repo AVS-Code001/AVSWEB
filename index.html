@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AVS</h1>
+        <p class="subtitle">NOW ENTERING</p>
+        <div class="navbar">
+            <a href="#about" class="nav-link" data-target="about">ABOUT</a>
+            <a href="#resume" class="nav-link" data-target="resume">RESUME</a>
+            <a href="#contact" class="nav-link" data-target="contact">CONTACT</a>
+        </div>
+    </div>
+    <div class="content">
+<div id="about" class="section active">
+    <h2>Aaron</h2>
+    <div class="land-container">
+        <div class="land-image-wrapper">
+            <img id="landImage" src="Aaron1.jpeg" alt="Land Image" class="land-image">
+            <div class="land-text">
+                <p>Aaron Sayson is passionate about technology and innovation, with a background in project management and IT lab administration. He excels in problem-solving, leading creative initiatives, and enhancing educational experiences through technical support and equipment maintenance.</p>
+                <p class="full-text" style="display: none;"> I am Aaron Sayson Born in Lopez Quezon In 10/01/2005 Resident at 28b Visayas st I will graduate from senior high school on May 30, specializing in ICT programming. I have strong skills in computer science and software development, gained through coursework and projects. I am eager to apply my knowledge in real-world challenges.</p>
+            </div>
+        </div>
+        <div class="controls">
+            <label for="imageWidth">Width (%):</label>
+            <input type="range" id="imageWidth" name="imageWidth" min="10" max="100" value="50">
+        </div>
+    </div>
+    
+</div>
+
+
+      <div id="resume" class="section">
+    <h2>Resume</h2>
+    <p><strong>AARON SAYSON</strong></p>
+    <p><strong>Contact:</strong></p>
+    <p>28b Visayas st Batasan Hills QC</p>
+    <p>09260354334</p>
+    <p>Saysonaaron555@gmail.com</p>
+    <p><strong>Skills:</strong></p>
+    <p>Project Management: [5/7 points]</p>
+    <p>Problem Solving: [3/7 points]</p>
+    <p>Creativity: [4/7 points]</p>
+    <p>Leadership: [4/7 points]</p>
+    <button id="toggleResumeButton">Show Resume Details</button>
+    <div id="resumeDetails" style="display: none;">
+        <p><strong>About Me:</strong></p>
+        <p>I am Aaron Sayson Born in Lopez Quezon In 10/01/2005 Resident at 28b Visayas st I will graduate from senior high school on May 30, specializing in ICT programming. I have strong skills in computer science and software development, gained through coursework and projects. I am eager to apply my knowledge in real-world challenges.</p>
+        <p><strong>Education:</strong></p>
+        <ul>
+            <li>Graduated in pecaes elementary school 2017 - 2018</li>
+            <li>Graduated in Batasan Hills national high school 2023-2024</li>
+        </ul>
+        <p><strong>Achievement:</strong></p>
+        <ul>
+            <li>With honor</li>
+            <li>NCII Passer-Computer system service</li>
+        </ul>
+        <p><strong>Work Experience:</strong></p>
+        <p>Work immersion in Animation lab in the school where I graduated</p>
+        <p>Assistant coordinator</p>
+        <p>During my work immersion at the Animation Lab, I assisted students with technical issues, including password resets, and facilitated smooth transitions between classes and activities. I maintained the lab's equipment and collaborated with teachers and students to understand the lab's functionality and the needs of its users.</p>
+    </div>
+</div>
+
+        <div id="contact" class="section">
+            <section class="contact-us">
+                <h1>Contact Us</h1>
+                <p>Hi 👋 Contact Me if you have any questions.</p>
+
+                <form id="contact-form">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="topic">What would you like to ask about me?</label>
+                    <select id="topic" name="topic">
+                        <option value="education">Education</option>
+                        <option value="work-experience">Work Experience</option>
+                        <option value="skills">Skills</option>
+                        <option value="achievements">Achievements</option>
+                        <option value="personal-life">Personal Life</option>
+                    </select>
+
+                    <label for="help-with">Or tell me what you need help with:</label>
+                    <input type="text" id="help-with" name="help-with" placeholder="Enter your question" required>
+
+                    <button type="submit" class="get-help">GET HELP</button>
+                </form>
+
+                <a href="#" class="privacy-policy">Privacy Policy</a>
+            </section>
+
+            <section class="discover-more">
+                <h2 id="greeting"></h2>
+                <a href="#" class="help-center">Visit the Help Center</a>
+            </section>
+        </div>
+    </div>
+    <div class="logo" id="logo">
+        <img src="Avs.png" alt="Logo">
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
